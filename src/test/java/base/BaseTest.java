@@ -5,14 +5,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import utils.DriverFactory;
 import utils.PageFactory;
 
+@Listeners({io.qameta.allure.testng.AllureTestNg.class})
 public class BaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(BaseTest.class);
-
-    protected WebDriver driver;
+    private WebDriver driver;
     protected PageFactory pages;
 
     @BeforeMethod

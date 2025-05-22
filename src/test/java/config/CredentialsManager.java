@@ -9,8 +9,8 @@ public class CredentialsManager {
     private static Properties props = new Properties();
 
     static {
-        try (FileInputStream fis = new FileInputStream(PROPERTIES_FILE)) {
-            props.load(fis);
+        try (FileInputStream stream = new FileInputStream(PROPERTIES_FILE)) {
+            props.load(stream);
         } catch (IOException e) {
             throw new RuntimeException("Could not load credentials file", e);
         }

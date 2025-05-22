@@ -14,13 +14,13 @@ public class CartPage {
         this.driver = driver;
     }
 
-    private By checkoutButton = By.id("checkout");
+    private final By checkoutButton = By.id("checkout");
 
     private By getRemoveButtonByItemName(String name) {
         return By.xpath("//div[@class='cart_item'][.//div[text()='" + name + "']]//button[contains(text(),'Remove')]");
     }
 
-    @Step("Remove items from cart: {itemNames}")
+    @Step("Remove items from the cart: {itemNames}")
     public void removeItems(List<String> itemNames) {
         for (String name : itemNames) {
             WaiterUtils.waitForElementClickable(driver, getRemoveButtonByItemName(name)).click();

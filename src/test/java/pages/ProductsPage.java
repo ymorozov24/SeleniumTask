@@ -1,4 +1,3 @@
-// ProductsPage.java
 package pages;
 
 import io.qameta.allure.Step;
@@ -15,7 +14,7 @@ public class ProductsPage {
         this.driver = driver;
     }
 
-    private By cartIcon = By.className("shopping_cart_link");
+    private final By cartIcon = By.className("shopping_cart_link");
 
     private By getAddToCartButtonByItemName(String name) {
         return By.xpath("//div[@class='inventory_item'][.//div[text()='" + name + "']]//button[contains(text(),'Add to cart')]");
