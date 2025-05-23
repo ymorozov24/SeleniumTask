@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import pages.*;
 
 public class PageFactory {
-    private final WebDriver driver;
+    private WebDriver driver;
 
     private LoginPage loginPage;
     private ProductsPage productsPage;

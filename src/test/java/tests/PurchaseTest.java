@@ -21,6 +21,7 @@ public class PurchaseTest extends BaseTest {
         pages.loginPage().login(CredentialsManager.getUsername(), CredentialsManager.getPassword());
 
         logger.info("Add items");
+        //We can also use DataProvider here for test data
         pages.productsPage().addItems(List.of("Sauce Labs Backpack", "Sauce Labs Fleece Jacket", "Sauce Labs Onesie"));
         pages.productsPage().goToCart();
 
