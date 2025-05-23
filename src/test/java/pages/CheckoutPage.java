@@ -12,24 +12,24 @@ public class CheckoutPage {
         this.driver = driver;
     }
 
-    private final By firstName = By.id("first-name");
-    private final By lastName = By.id("last-name");
-    private final By postalCode = By.id("postal-code");
+    private final By firstNameInput = By.id("first-name");
+    private final By lastNameInput = By.id("last-name");
+    private final By postalCodeInput = By.id("postal-code");
     private final By continueButton = By.id("continue");
 
     @Step("Enter first name: {fName}")
     public void enterFirstName(String fName) {
-        WaiterUtils.waitForElementVisible(driver, firstName).sendKeys(fName);
+        WaiterUtils.waitForElementVisible(driver, firstNameInput).sendKeys(fName);
     }
 
     @Step("Enter last name: {lName}")
     public void enterLastName(String lName) {
-        WaiterUtils.waitForElementVisible(driver, lastName).sendKeys(lName);
+        WaiterUtils.waitForElementVisible(driver, lastNameInput).sendKeys(lName);
     }
 
     @Step("Enter postal code: {zip}")
     public void enterPostalCode(String zip) {
-        WaiterUtils.waitForElementVisible(driver, postalCode).sendKeys(zip);
+        WaiterUtils.waitForElementVisible(driver, postalCodeInput).sendKeys(zip);
     }
 
     @Step("Click Continue button")
